@@ -2,7 +2,7 @@ var bubbles = [];
 
 setup = function () {
   createCanvas(600, 600);
-  // your code goes here
+
 };
 
 draw = function () {
@@ -11,6 +11,6 @@ draw = function () {
     bubble.update();
     bubble.display();
   });
-  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY));
-  // your code goes here
+  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY)); //new prototype pushed into array
+
 };
