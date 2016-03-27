@@ -13,8 +13,8 @@ draw = function () {
     bubble.display();
   });
   while (bubbles.length < 500) {
-    bubbles.push(new Bubble(random(0, 600), random(0, 600)));
+    bubbles.push(new Bubble(random(0, 600), random(0, 600))); //new Bubble pushed into array up to 500 bubbles
   }
-  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY)); //new prototype pushed into array
+  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY)); //new Bubble pushed into array
 
 };
