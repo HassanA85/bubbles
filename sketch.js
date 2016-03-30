@@ -1,11 +1,30 @@
-var bubbles = [];
+var bacterium = [];
 
-setup = function () {
+function setup() {
   createCanvas(600, 600);
-  // your code goes here
+  while (bacterium.length < 500) {
+    bacterium.push(new Bacteria(random(0, 600), random(0, 600)));
+  }
 };
 
-draw = function () {
+function draw() {
   background(0);
-  // your code goes here
+
+  bacterium.forEach(function updateAndDisplay(bacteria) {
+    bacteria.update();
+    bacteria.display();
+  });
+
 };
+
+// var bubbles = [];
+//
+// setup = function () {
+//   createCanvas(600, 600);
+//   // your code goes here
+// };
+//
+// draw = function () {
+//   background(0);
+//   // your code goes here
+// };
